@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Verticale</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            height: 5000px;
+        }
+
+        /* Navbar */
+        .navbar {
+    width: 70px;
+    height: 100%; /* S'adapte à la hauteur totale du body */
+    background: linear-gradient(to bottom, black, #1FBFB8);
+    border-right: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    position: fixed; /* Fixé sur le côté gauche */
+    top: 0;
+    left: 0;
+}
+
+
+        /* Liens */
+        .navbar a {
+            writing-mode: vertical-rl; /* Écriture verticale */
+            transform: rotate(180deg); /* Lisibilité du texte */
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            margin: 10px 0;
+            transition: opacity 0.2s;
+        }
+
+        .navbar a:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#">Lien 1</a>
+        <a href="#">Lien 2</a>
+        <a href="#">Lien 3</a>
+        <a href="#">Lien 4</a>
+        <a href="#">Lien 5</a>
+        <a href="#">Lien 6</a>
+    </nav>
+
+</body>
+</html>
