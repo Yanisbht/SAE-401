@@ -5,59 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar Verticale</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            display: flex;
-            height: 5000px;
-        }
-
         /* Navbar */
-        .navbar {
-    width: 70px;
-    height: 100%; /* S'adapte à la hauteur totale du body */
-    background: linear-gradient(to bottom, black, #1FBFB8);
-    border-right: 2px solid black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 10px;
-    position: fixed; /* Fixé sur le côté gauche */
-    top: 0;
-    left: 0;
+.navbar-bleu {
+width: 70px;
+height: 100%; /* S'adapte à la hauteur totale du body */
+background: linear-gradient(to bottom, black, #1FBFB8);
+border-right: 2px solid black;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding-top: 10px;
+position: fixed; /* Fixé sur le côté gauche */
+top: 0;
+left: 0;
 }
 
 
-        /* Liens */
-        .navbar a {
-            writing-mode: vertical-rl; /* Écriture verticale */
-            transform: rotate(180deg); /* Lisibilité du texte */
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            font-family: Arial, sans-serif;
-            margin: 10px 0;
-            transition: opacity 0.2s;
-        }
+.navbar-bleu a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0; /* Espacement entre les icônes */
+}
 
-        .navbar a:hover {
-            opacity: 0.8;
-        }
+.imgnav {
+    width: 52px; /* Taille fixe des icônes */
+    height: 52px;
+    object-fit: contain; /* Évite la déformation */
+    transition: transform 0.2s, filter 0.2s; /* Animation fluide */
+}
+
+.imgnav:hover {
+    transform: scale(1.3); /* Agrandissement de 20% */
+    filter: brightness(1.3); /* Rend l'image plus claire */
+}
     </style>
 </head>
 <body>
 
-    <nav class="navbar">
-        <a href="#">Lien 1</a>
-        <a href="#">Lien 2</a>
-        <a href="#">Lien 3</a>
-        <a href="#">Lien 4</a>
-        <a href="#">Lien 5</a>
-        <a href="#">Lien 6</a>
+    <nav class="navbar-bleu">
+        <a href="#"><img class="imgnav" src="./Icones/Profile blanc.png" alt="Icones du Profile"></a>
+        <a href="#"><img class="imgnav" src="./Icones/Home blanc.png" alt="Icones du Profile"></a>
+        <a href="#"><img class="imgnav" src="./Icones/Stats blanc.png" alt="Icones du Profile"></a>
+        <a href="#"><img class="imgnav" src="./Icones/Mail blanc.png" alt="Icones du Profile"></a>
+        <a href="#"><img class="imgnav" src="./Icones/Com blanc.png" alt="Icones du Profile"></a>
+        <a href="#"><img class="imgnav" src="./Icones/Déconnexion blanc.png" alt="Icones du Profile"></a>
     </nav>
 
 </body>
