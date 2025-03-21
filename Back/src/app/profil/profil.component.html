@@ -1,0 +1,49 @@
+<style>
+    .navbar-bleu {
+        width: 80px;
+        height: 100vh;
+        background: linear-gradient(to bottom, black, #1FBFB8);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    }
+    .navbar-bleu a {
+        margin: 15px 0;
+    }
+    .imgnav {
+        width: 50px;
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+    .imgnav:hover {
+        transform: scale(1.2);
+        filter: brightness(1.5);
+    }
+</style>
+
+
+
+<nav class="navbar-bleu">
+    <a href="#"><img class="imgnav" src="Profile blanc.png" alt="Profile"></a>
+    <a href="#"><img class="imgnav" src="Home blanc.png" alt="Home"></a>
+    <a href="#"><img class="imgnav" src="Stats blanc.png" alt="Stats"></a>
+    <a href="#"><img class="imgnav" src="Mail blanc.png" alt="Mail"></a>
+    <a href="#"><img class="imgnav" src="Com blanc.png" alt="Com"></a>
+    <a href="#"><img class="imgnav" src="Déconnexion blanc.png" alt="Déconnexion"></a>
+</nav>
+
+<div class="profile-info">
+    <h2>Profil Étudiant</h2>
+    <p><strong>Prénom :</strong> {{ profilData.prenom }}</p>
+    <p><strong>Nom :</strong> {{ profilData.nom }}</p>
+    <p><strong>Date de naissance :</strong> {{ profilData.date_naissance }}</p>
+    <p><strong>Login :</strong> {{ profilData.login }}</p>
+    <p><strong>NEPH :</strong> {{ profilData.neph }}</p>
+    <p><strong>Date d'inscription :</strong> {{ profilData.date_inscription }}</p>
+    <p><strong>ETG :</strong> {{ profilData.etg ? 'Oui' : 'Non' }}</p>
+    <p><strong>Échecs ETG :</strong> {{ profilData.echec_etg }}</p>
+  </div>

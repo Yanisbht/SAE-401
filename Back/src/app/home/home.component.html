@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy2Drive</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #e2f5f5, #8bd7d4);
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar-bleu {
+            width: 80px;
+            height: 100vh;
+            background: linear-gradient(to bottom, black, #1FBFB8);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .navbar-bleu a {
+            margin: 15px 0;
+        }
+        .imgnav {
+            width: 50px;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+        .imgnav:hover {
+            transform: scale(1.2);
+            filter: brightness(1.5);
+        }
+        .content {
+            margin-left: 100px;
+            padding: 40px;
+        }
+        .logo img {
+            width: 250px;
+            margin-bottom: 20px;
+        }
+        .button {
+            background: linear-gradient(to right, black, #1FBFB8);
+            color: white;
+            font-size: 18px;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+        .card-custom {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-custom:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .card-custom p {
+            margin: 0;
+            color: #333;
+            font-size: 1rem;
+        }
+        .video-container {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .border-bottom-custom {
+            border-bottom: 2px solid #1FBFB8;
+            width: 25%;
+            margin: 0 auto 20px;
+        }
+        .user-review {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .user-review h3 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #1FBFB8;
+        }
+        .user-review p {
+            font-style: italic;
+            color: #555;
+        }
+        /* Nouvelle classe pour la section bleue */
+        .section-bleue {
+            background-color: #E6F4F1; /* Bleu clair */
+            width: 100%;
+            padding: 40px 0;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar-bleu">
+        <a href="#"><img class="imgnav" src="Profile blanc.png" alt="Profile"></a>
+        <a href="#"><img class="imgnav" src="Home blanc.png" alt="Home"></a>
+        <a href="#"><img class="imgnav" src="Stats blanc.png" alt="Stats"></a>
+        <a href="#"><img class="imgnav" src="Mail blanc.png" alt="Mail"></a>
+        <a href="#"><img class="imgnav" src="Com blanc.png" alt="Com"></a>
+        <a href="#"><img class="imgnav" src="Déconnexion blanc.png" alt="Déconnexion"></a>
+    </nav>
+
+    <div class="content">
+        <div class="text-center">
+            <div class="logo">
+                <img src="logo.png" alt="Easy2Drive Logo">
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card-custom text-center">
+                        <h2>Découvrez vos résultats</h2>
+                        <p>Suivez votre progression lors de votre apprentissage avec notre plateforme intuitive.</p>
+                        <a routerLink="/connexion" class="btn button mt-3">Connexion</a>
+<p class="mt-3">Pas encore de compte ?</p>
+<a routerLink="/inscription" class="btn button">Inscription</a>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center align-items-center">
+                    <div class="video-container">
+                        <video autoplay loop muted>
+                            <source src="video/sample.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la lecture de vidéos.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Section avec fond bleu clair -->
+        <div class="section-bleue">
+            <div class="container text-center">
+                <h2>Suivez votre progression d’une manière révolutionnaire</h2>
+                <div class="border-bottom-custom"></div>
+                <p>Accédez à vos statistiques en temps réel et améliorez vos performances.</p>
+                <div class="row justify-content-center">
+                    <div class="col-md-5 mb-3">
+                        <div class="card-custom">
+                            <p>Analysez vos résultats et progressez rapidement grâce à des outils innovants.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-5 mb-3">
+                        <div class="card-custom">
+                            <p>Accédez à vos statistiques en temps réel et améliorez vos performances.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-5 mb-3">
+                        <div class="card-custom">
+                            <p>Analysez vos résultats et progressez rapidement grâce à des outils innovants.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-5 mb-3">
+                        <div class="card-custom">
+                            <p>Accédez à vos statistiques en temps réel et améliorez vos performances.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-5 mb-3">
+                      <div class="card-custom">
+                          <p>Analysez vos résultats et progressez rapidement grâce à des outils innovants.</p>
+                      </div>
+                  </div>
+                  <div class="col-md-5 mb-3">
+                      <div class="card-custom">
+                          <p>Accédez à vos statistiques en temps réel et améliorez vos performances.</p>
+                      </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <h2 class="text-center">L’avis des gens sur nous</h2>
+            <div class="border-bottom-custom"></div>
+            <div class="user-review">
+                <h3>Par Jean Claude</h3>
+                <p>Il y a 6 heures</p>
+                <p>Henry électrique puberting prolongant une seule page extérieure non vaste comme joueur en toute séduction d’époque que le plus jeune est bien pour une personne pour ne tenir dehors fin.</p>
+            </div>
+            <div class="user-review">
+                <h3>Par Maige</h3>
+                <p>Il y a 5 heures</p>
+                <p>Henry électrique puberting prolongant une seule page extérieure non vaste comme joueur en toute séduction d’époque que le plus jeune est bien pour une personne pour ne tenir dehors fin.</p>
+            </div>
+        </div>
+    
+</body>
+</html>
