@@ -1,0 +1,201 @@
+<html>
+ <head>
+  <title>
+   Se connecter - Easy2Drive
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            background-color: white;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            position: absolute;
+            top: 20px; /* Position the header at the top */
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+        .header .icons {
+            display: flex;
+            gap: 1rem;
+        }
+        .header .icons button {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .header .icons i {
+            font-size: 2rem;
+            color: #0d9488;
+        }
+        .header .logo {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .header .logo span {
+            color: #0d9488;
+        }
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            position: relative;
+        }
+        .form-container {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .form-container h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .form-container input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 2rem;
+            font-size: 1rem;
+            color: white;
+            background: linear-gradient(to right, #0d9488, #14b8a6);
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+        .form-container .forgot-password {
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            color: #4b5563;
+        }
+        .form-container .signup-button {
+            margin-top: 0.5rem;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 2rem;
+            font-size: 1rem;
+            color: white;
+            background: linear-gradient(to right, #0d9488, #14b8a6);
+            cursor: pointer;
+        }
+        .image-container {
+            display: none;
+        }
+        .divider {
+            display: none;
+        }
+        @media (min-width: 768px) {
+            .main {
+                flex-direction: row;
+            }
+            .image-container {
+                display: block;
+                width: 50%;
+                text-align: center;
+                padding-left: 60px; /* Add more padding to move the image further away from the divider */
+            }
+            .form-container {
+                width: 50%;
+            }
+            .divider {
+                display: block;
+                width: 1px;
+                height: 100%;
+                background-color: #000;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        .title-container {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .title-container h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <div class="icons">
+     <button>
+      <i class="fas fa-home">
+      </i>
+     </button>
+     <button>
+      <i class="fas fa-cog">
+      </i>
+     </button>
+    </div>
+    <div class="logo">
+     Easy
+     <span>
+      2
+     </span>
+     Drive
+    </div>
+   </div>
+   <div class="title-container">
+    <h1>
+     Se connecter
+    </h1>
+   </div>
+   <div class="main">
+    <div class="form-container">
+     <form>
+      <input placeholder="Identifiant" type="text"/>
+      <input placeholder="Mot de passe" type="password"/>
+      <button type="button" (click)="onLogin()">
+        Se connecter
+      </button>
+     </form>
+     <div class="forgot-password">
+      <a href="#">
+       Mot de passe oublié ?
+      </a>
+     </div>
+     <button class="signup-button">
+      S'inscrire
+     </button>
+    </div>
+    <div class="divider">
+    </div>
+    <div class="image-container">
+     <img alt="Illustration of two people in a car with a cityscape background" height="300" src="https://storage.googleapis.com/a1aa/image/CH_aZVHgF1eswNUzS4LNOQPXtDjUfa9wY494qpNS8iU.jpg" width="400"/>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
+
