@@ -35,8 +35,11 @@ if ($userId > 0) {
             personne p
         JOIN 
             etudiant e 
+        JOIN 
+            admin a
         ON 
             p.id_personne = e.id_personne
+            AND p.id_personne = a.id_personne
         WHERE 
             p.id_personne = :userId;
     ";
